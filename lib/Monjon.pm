@@ -45,6 +45,8 @@ __END__
 
 =encoding utf-8
 
+=for stopwords monjon monjons booleans
+
 =head1 NAME
 
 Monjon - create your Moo objects as blessed scalar refs

@@ -7,6 +7,9 @@ use Sub::Quote ();
 
 package Method::Generate::Accessor::Role::Monjon;
 
+our $AUTHORITY = 'cpan:TOBYINK';
+our $VERSION   = '0.001';
+
 use Moo::Role;
 
 my $_fh;
@@ -178,7 +181,7 @@ sub _calculate_offset
 	my $target = $self->target_class;
 	
 	if (not defined $spec->{_pack_offset}{$target})
-	{	
+	{
 		my $ctor   = 'Monjon'->_constructor_maker_for($target);
 		my $all    = $ctor->all_attribute_specs;
 		
