@@ -1,0 +1,17 @@
+# This file provides instructions for packaging.
+
+@prefix : <http://ontologi.es/doap-deps#>.
+
+`Monjon`
+	:runtime-requirement       [ :on "Moo 1.004_003"^^:CpanId ];
+	:runtime-requirement       [ :on "Import::Into"^^:CpanId ];
+	:runtime-requirement       [ :on "List::Util"^^:CpanId ];
+	:runtime-suggestion        [ :on "Hash::FieldHash"^^:CpanId ];
+	:runtime-suggestion        [ :on "Hash::Util::FieldHash::Compat"^^:CpanId ];
+	:test-requirement          [ :on "Test::Modern 0.007"^^:CpanId ];
+	:test-recommendation       [ :on "Types::Standard 0.001"^^:CpanId ];
+	:configure-recommendation  [ :on "ExtUtils::CBuilder"^^:CpanId ];
+	:configure-requirement     [ :on "Text::ParseWords"^^:CpanId ];
+	:develop-recommendation    [ :on "Dist::Inkt 0.001"^^:CpanId ];
+	.
+
