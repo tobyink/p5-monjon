@@ -113,6 +113,26 @@ Basically, don't apply method modifiers to accessors.
 
 =back
 
+=head2 Benchmarking
+
+Monjon's accessors are significantly slower than Moo's, especially when
+Moo is able to make use of L<Class::XSAccessor>.
+
+However, if your data consists of mostly numbers, booleans, and small
+or fixed-width strings, Monjon is likely to consume a lot less memory
+per instance.
+
+See:
+L<https://github.com/tobyink/p5-monjon/blob/master/devel.bench/bench.pl>.
+
+=head2 What's a Monjon?
+
+It's a very shy little wallaby, and it's near-threatened. See
+L<http://en.wikipedia.org/wiki/Monjon>.
+
+If you like this module and want to help monjons, please see
+L<http://www.australianwildlife.org.au/Artesian-Range.aspx>.
+
 =head1 BUGS
 
 Please report any bugs to
@@ -122,10 +142,7 @@ L<http://rt.cpan.org/Dist/Display.html?Queue=Monjon>.
 
 L<Moo>.
 
-What's a monjon?! It's a very shy little wallaby, and it's
-near-threatened. See L<http://en.wikipedia.org/wiki/Monjon>.
-If you like this module and want to help monjons, please see
-L<http://www.australianwildlife.org.au/Artesian-Range.aspx>.
+L<http://www.perlmonks.org/?node_id=1040313>.
 
 =head1 AUTHOR
 
