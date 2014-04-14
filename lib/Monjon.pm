@@ -86,7 +86,7 @@ technique used by L<BrowserUK|http://www.perlmonks.org/?node_id=171588>
 on PerlMonks at L<http://www.perlmonks.org/?node_id=1040313>.
 
 However, inside-out attributes are also offered for data which cannot
-be reasonably serialized to a string. (However, if you do need to store
+be reasonably serialized to a string. (But if you do need to store
 things like references, perhaps Monjon is not for you.)
 
 =head2 Differences from Moo
