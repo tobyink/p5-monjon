@@ -17,7 +17,7 @@ sub import {
 	my $class = shift;
 	my $caller = caller;
 	
-	'Moo'->import::into($caller);
+	'Moo'->import::into($caller, @_);
 	
 	'Moo::Role'->apply_roles_to_object(
 		'Moo'->_accessor_maker_for($caller),
