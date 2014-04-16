@@ -26,3 +26,6 @@ if ($] < 5.009004)
 
 $meta->{prereqs}{runtime}{requires}{'UNIVERSAL::DOES'} = 0
 	if $] < 5.010000;
+
+$meta->{prereqs}{test}{requires}{'Types::Standard'} = 0
+	if $ENV{AUTOMATED_TESTING} || $ENV{EXTENDED_TESTING};
