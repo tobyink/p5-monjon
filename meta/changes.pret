@@ -4,3 +4,10 @@
 	issued  2014-04-14;
 	label   "Initial release".
 
+`Monjon 0.002 cpan:TOBYINK`
+	issued  2014-04-16;
+	changeset [
+		item "Load UNIVERSAL::DOES on Perl versions older than 5.10."^^Change;
+		item "Add Types::Standard to list of modules required for testing if either of the AUTOMATED_TESTING or EXTENDED_TESTING environment variables are set to true."^^Packaging;
+	].
+

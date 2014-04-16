@@ -7,7 +7,7 @@ use Sub::Quote ();
 package Method::Generate::Constructor::Role::Monjon;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001';
+our $VERSION   = '0.002';
 
 use Moo::Role;
 

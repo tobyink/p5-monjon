@@ -10,7 +10,7 @@ use Import::Into ();
 package Monjon;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001';
+our $VERSION   = '0.002';
 our @ISA       = qw( Moo );
 
 do { require UNIVERSAL::DOES }
