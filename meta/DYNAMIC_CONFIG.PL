@@ -23,3 +23,6 @@ if ($] < 5.009004)
 		: 'Hash::Util::FieldHash::Compat';
 	$meta->{prereqs}{runtime}{requires}{$module} = 0;
 }
+
+$meta->{prereqs}{runtime}{requires}{'UNIVERSAL::DOES'} = 0
+	if $] < 5.010000;

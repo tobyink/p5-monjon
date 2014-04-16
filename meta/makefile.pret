@@ -8,6 +8,7 @@
 	:runtime-requirement       [ :on "List::Util"^^:CpanId ];
 	:runtime-suggestion        [ :on "Hash::FieldHash"^^:CpanId ];
 	:runtime-suggestion        [ :on "Hash::Util::FieldHash::Compat"^^:CpanId ];
+	:runtime-suggestion        [ :on "UNIVERSAL::DOES"^^:CpanId ];
 	:test-requirement          [ :on "Test::Modern 0.007"^^:CpanId ];
 	:test-recommendation       [ :on "Types::Standard 0.001"^^:CpanId ];
 	:configure-recommendation  [ :on "ExtUtils::CBuilder"^^:CpanId ];

@@ -13,6 +13,9 @@ our $AUTHORITY = 'cpan:TOBYINK';
 our $VERSION   = '0.001';
 our @ISA       = qw( Moo );
 
+do { require UNIVERSAL::DOES }
+	if $] < 5.010000;
+
 sub import {
 	my $class = shift;
 	my $caller = caller;
