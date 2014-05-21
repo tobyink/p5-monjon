@@ -49,8 +49,8 @@ around _handle_subconstructor => sub
 	my ($into, $name) = @_;
 	
 	return sprintf(
-		'$Monjon::INSTANCES_EXIST{%s} = 1; %s',
-		Sub::Quote::quotify($into),
+		'$Monjon::INSTANCES_EXIST{"%s"} = 1; %s',
+		quotemeta($into),
 		$self->$next(@_),
 	);
 };

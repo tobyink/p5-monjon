@@ -64,32 +64,32 @@ sub _generate_simple_has
 {
 	my $self = shift;
 	my ($me, $name, $spec) = @_;
-	my $name_str = Sub::Quote::quotify($name);
-	"exists(\$${P}FIELDS{${me}}{${name_str}})";
+	my $name_str = quotemeta($name);
+	"exists(\$${P}FIELDS{${me}}{\"${name_str}\"})";
 }
 
 sub _generate_simple_clear
 {
 	my $self = shift;
 	my ($me, $name, $spec) = @_;
-	my $name_str = Sub::Quote::quotify($name);
-	"delete(\$${P}FIELDS{${me}}{${name_str}})";
+	my $name_str = quotemeta($name);
+	"delete(\$${P}FIELDS{${me}}{\"${name_str}\"})";
 }
 
 sub _generate_simple_get
 {
 	my $self = shift;
 	my ($me, $name, $spec) = @_;
-	my $name_str = Sub::Quote::quotify($name);
-	"\$${P}FIELDS{${me}}{${name_str}}";
+	my $name_str = quotemeta($name);
+	"\$${P}FIELDS{${me}}{\"${name_str}\"}";
 }
 
 sub _generate_core_set
 {
 	my $self = shift;
 	my ($me, $name, $spec, $value) = @_;
-	my $name_str = Sub::Quote::quotify($name);
-	"\$${P}FIELDS{${me}}{${name_str}} = ${value}";
+	my $name_str = quotemeta($name);
+	"\$${P}FIELDS{${me}}{\"${name_str}\"} = ${value}";
 }
 
 sub _generate_xs
@@ -149,7 +149,6 @@ sub _generate_simple_get_packed
 {
 	my $self = shift;
 	my ($me, $name, $spec) = @_;
-	my $name_str = Sub::Quote::quotify($name);
 	sprintf(
 		'unpack(q(%s), substr(${%s}, %d, %d))',
 		$spec->{pack},
@@ -163,7 +162,6 @@ sub _generate_core_set_packed
 {
 	my $self = shift;
 	my ($me, $name, $spec, $value) = @_;
-	my $name_str = Sub::Quote::quotify($name);
 	sprintf(
 		'substr(${%s}, %d, %d) = pack(q(%s), %s)',
 		$me,
