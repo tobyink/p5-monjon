@@ -11,3 +11,10 @@
 		item "Add Types::Standard to list of modules required for testing if either of the AUTOMATED_TESTING or EXTENDED_TESTING environment variables are set to true."^^Packaging;
 	].
 
+`Monjon 0.003 cpan:TOBYINK`
+	issued  2014-05-21;
+	changeset [
+		item "Moo is not going to support multi-inheritance well enough for Monjon any time soon, so remove tests for it."^^Tests;
+		item "No longer require Moo 1.004_003. Moo 1.001000 should be sufficient."^^Packaging;
+	].
+
