@@ -3,7 +3,7 @@
 @prefix : <http://ontologi.es/doap-deps#>.
 
 `Monjon`
-	:runtime-requirement       [ :on "Moo 1.004_003"^^:CpanId ];
+	:runtime-requirement       [ :on "Moo 1.001000"^^:CpanId ];
 	:runtime-requirement       [ :on "Import::Into"^^:CpanId ];
 	:runtime-requirement       [ :on "List::Util"^^:CpanId ];
 	:runtime-suggestion        [ :on "Hash::FieldHash"^^:CpanId ];
