@@ -138,6 +138,12 @@ L<http://en.wikipedia.org/wiki/Monjon>.
 If you like this module and want to help monjons, please see
 L<http://www.australianwildlife.org.au/Artesian-Range.aspx>.
 
+=head1 CAVEATS
+
+Unless you have Moo 1.004_003 exactly (i.e. neither an older nor a
+newer version of Moo), multiple inheritance is unlikely to work for
+Monjon classes.
+
 =head1 BUGS
 
 Please report any bugs to
