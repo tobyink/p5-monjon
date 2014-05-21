@@ -21,7 +21,7 @@ the same terms as the Perl 5 programming language system itself.
 
 use strict;
 use warnings;
-use Test::Modern -requires => { 'Types::Standard' => '0.001' };
+use Test::Modern;
 
 {
 	package Local::Foo;
