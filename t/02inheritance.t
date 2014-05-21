@@ -35,34 +35,27 @@ use Test::Modern -requires => { 'Types::Standard' => '0.001' };
 }
 
 {
-	package Local::Bar;
+	package Local::FooBar;
 	use Monjon;
+	extends qw( Local::Foo );
 	
 	has bar => (
-		is        => 'rw',
+		is        => 'ro',
 		pack      => 'Z6',
 		default   => sub { "World" },
 	);
 }
 
-{
-	package Local::FooBar;
-	use Monjon;
-	extends qw( Local::Foo Local::Bar );
-}
-
 # Test all this twice. Need to test that Local::FooBar->new works both
-# *before* and *after* Local::Foo and Local::Bar objects have been
-# constructed.
+# *before* and *after* Local::Foo objects have been constructed.
 #
 for (0 .. 1)
 {
-	
 	object_ok(
 		sub { Local::FooBar->new },
 		'$foobar',
-		isa   => [qw/ Local::FooBar Local::Foo Local::Bar Moo::Object /],
-		does  => [qw/ Local::FooBar Local::Foo Local::Bar Moo::Object /],
+		isa   => [qw/ Local::FooBar Local::Foo Moo::Object /],
+		does  => [qw/ Local::FooBar Local::Foo Moo::Object /],
 		can   => [qw/ new foo bar /],
 		more  => sub {
 			my $foobar = shift;
@@ -84,22 +77,6 @@ for (0 .. 1)
 			is_string($$foo, "Hello\0", '$$foo');
 		},
 	);
-	
-	object_ok(
-		sub { Local::Bar->new },
-		'$bar',
-		isa   => [qw/ Local::Bar Moo::Object /],
-		does  => [qw/ Local::Bar Moo::Object /],
-		can   => [qw/ new bar /],
-		more  => sub {
-			my $bar = shift;
-			is($bar->bar, 'World', '$bar->bar');
-			$bar->bar('There');
-			is($bar->bar, 'There', '$bar->bar (write access)');
-			is_string($$bar, "There\0", '$$bar');
-		},
-	);
-	
 }
 
 done_testing;
