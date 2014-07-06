@@ -13,7 +13,7 @@ perl:
   - "blead"
 matrix:
   include:
-    - perl: 5.20
+    - perl: "5.20"
       env: COVERAGE=1         # enables coverage+coveralls reporting
 before_install:
   - export DIST_INKT_PROFILE="Dist::Inkt::Profile::TOBYINK"
