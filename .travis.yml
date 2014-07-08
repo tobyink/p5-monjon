@@ -25,6 +25,8 @@ before_install:
   - cd $BUILD_DIR             # $BUILD_DIR is set by the build-dist command
 install:
   - cpan-install --toolchain  # installs a vaguely recent EUMM, Exporter
+  - cpan-install List::Util   # undeclared dep for Hash-Util-FieldHash-Compat
+  - cpan-install version      # undeclared dep for Hash-Util-FieldHash-Compat
   - cpan-install --deps       # installs prereqs, including recommends
   - cpan-install --coverage   # installs converage prereqs, if enabled
 before_script:
