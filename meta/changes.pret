@@ -18,3 +18,10 @@
 		item "No longer require Moo 1.004_003. Moo 1.001000 should be sufficient."^^Packaging;
 		item "Document multiple-inheritance caveat."^^Documentation;
 	].
+
+`Monjon 0.004 cpan:TOBYINK`
+	issued  2014-09-15;
+	changeset [
+		item "Add repo link."^^Packaging;
+		item "Require at least Perl 5.6."^^Packaging;
+	].
